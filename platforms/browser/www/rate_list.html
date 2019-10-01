@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
+      <meta name="viewport" content="width=device-width">
+      <meta name="theme-color" content="#FF00FF">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" href="css/side-nav.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- Material Design Bootstrap -->
+  <link href="mdb/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="mdb/css/style.css" rel="stylesheet">
+
+
+<style>
+     table{ font-weight: bold;}
+.dtHorizontalVerticalExampleWrapper {
+max-width: 600px ;
+margin: 0 auto;
+}
+#dtHorizontalVerticalExample th, td {
+white-space: nowrap;
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}
+.table>tbody>tr>td{
+vertical-align: middle !important;
+}
+</style>
+    <title>Trash Hero</title>
+
+</head>
+
+<body>
+  
+    <div class="header" style="position: fixed;">
+        <span class="js-menu-show header__menu-toggle fa fa-bars" style="font-size: 30px;"></span>
+         <h3 style="padding-left: 20px">Trash Hero</h3>
+      </div>
+    <aside class="js-side-nav side-nav">
+        <nav class="js-side-nav__container side-nav__container">
+          <button class="js-menu-hide side-nav__hide fa fa-arrow-left" style="font-size: 30px"></button>
+          <header class="side-nav__header">
+            
+                <h4 id="hero">Trash Hero</h4>
+          </header>
+          <ul class="side-nav__content">
+            <li onclick="rate_list()">Rate List</li>
+            <li onclick="customer()">Customer Details</li>
+            <li onclick="logout()">Logout</li>
+
+          </ul>
+        </nav>
+    </aside>
+
+
+    <div class="container" style="padding-left: 0px;" >
+        <div class="row" style="margin-top:60px; ">
+            <div class="col-xs-12 col-sm-12 table-responsive" style="position: inherit !important;">
+               <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
+                <thead>
+                    <Tr class="success">
+                        <th class="th-sm">Sr.No</th>
+                        <th class="th-sm">Images</th>
+                        <th class="th-sm">Items</th>
+                        <th class="th-sm">Price</th>
+                    </Tr>
+                </thead>
+            <tbody id ="table">
+
+            </tbody>
+
+            </div>            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/rate_list.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+            <script src="js/side-nav.js"></script>
+
+<script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="mdb/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="mdb/js/mdb.js"></script>
+  <script type="text/javascript" src="mdb/js/addons/datatables.js"></script>
+
+  <!--   <script>
+ $(document).ready(function () {
+$('#dtHorizontalVerticalExample').DataTable({
+"scrollX": true,
+"scrollY": 500,
+});
+$('.dataTables_length').addClass('bs-select');
+});
+
+</script>
+ -->
+
+</body>
+
+</html>

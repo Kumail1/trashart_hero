@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.trashmasti.trashhero" version="0.0.1" versionCode="3" versionName="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>Trash Hero</name>
+    <description>
+        <b>Trash Masti app- the app for drivers.</b>
+        <p>
+    Sign up on the new Trash Masti Driver app to make easy money collecting trash from various locations. Trash Masti gives you the opportunity to become your own boss through flexible working hours. Choose your own schedule and work to fit your unique lifestyle, so you can focus on the things that matter. The app comes with the following features:
+    * Shows you the collection address as well as time of collection.
+    * Notifies you when you are all set to go.
+    * Calculates the amount of cash you’ve earned for each trip.
+    * Provides you with daily updates of trash collecting activity in your area.
+    * Assists you on every step of the journey.
+
+    Download the app now - the Trash Masti experience awaits you! 
+
+    Still have questions? Feel free to contact us.
+    </p>
+    </description>
+    <author email="Kumailmehdi3@gmail.com" href="http://www.trashmasti.com">
+        Kumail Mehdi
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-maxSdkVersion" value="28" />
+</widget>
