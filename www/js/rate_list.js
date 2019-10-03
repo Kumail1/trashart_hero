@@ -16,7 +16,7 @@
               $('#hero').html(hero);
 
 
-	$.post("http://trashart.cmcengineering.com.pk/api_trash_hero/rate_list.php", function(getdata){
+	$.post("http://trashart.locumset.com/api_trash_hero/rate_list.php", function(getdata){
    			//console.log(getdata);	
    			let regex = /\,(?!\s*?[\{\[\"\'\w])/g;
 			let correct = getdata.replace(regex, ''); // remove all trailing commas
@@ -26,7 +26,7 @@
  			for (var i = 0; i < data.length; i++) {
  			    //console.log(data);
 				var id ='<td>'+i+'</td>';
- 			   var image ='<td style= "width:100px "><img src="http://trashart.cmcengineering.com.pk/'+data[i].image+ '"style= "width:50%; border-radius: 5px; margin-bottom:0px !important; margin-top:0px !important;"></td>';
+ 			   var image ='<td style= "width:100px "><img src="http://trashart.locumset.com/'+data[i].image+ '"style= "width:50%; border-radius: 5px; margin-bottom:0px !important; margin-top:0px !important;"></td>';
  			   var name ='<td>'+data[i].name+'</td>';
  			   var price ='<td>'+data[i].price+'</td>';
  			   

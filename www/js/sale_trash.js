@@ -15,7 +15,7 @@
 var hero = window.localStorage["n"];
               $('#hero').html(hero);
 	$.ajax({
- 		url:'http://trashart.cmcengineering.com.pk/api_trash_hero/sale_trash.php',
+ 		url:'http://trashart.locumset.com/api_trash_hero/sale_trash.php',
  		type:'post',
  		success:function(getdata){
  			  //console.log(getdata);

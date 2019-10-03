@@ -21,7 +21,7 @@ if (window.navigator.onLine == false) {
  		}
  		console.log(data);
 		if(n != '' && p != '') {
-			$.post('http://trashart.cmcengineering.com.pk/api_trash_hero/login.php', data,function(resp){
+			$.post('http://trashart.locumset.com/api_trash_hero/login.php', data,function(resp){
 			
 			console.log(resp);
 

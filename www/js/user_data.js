@@ -16,7 +16,7 @@
               $('#hero').html(hero);
     console.log(email);
 
-	$.post("http://trashart.cmcengineering.com.pk/api_trash_hero/user_details.php",email, function(getdata){
+	$.post("http://trashart.locumset.com/api_trash_hero/user_details.php",email, function(getdata){
    			//console.log(getdata);	
    			let regex = /\,(?!\s*?[\{\[\"\'\w])/g;
 			let correct = getdata.replace(regex, ''); // remove all trailing commas
